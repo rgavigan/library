@@ -1,3 +1,130 @@
-h1 {
-    text-align: center;
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.login {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #eee;
+    box-shadow: 0 1px 5px black;
+}
+
+body {
+    width: 100%;
+    margin: 0;
+}
+
+.login > button {
+    width: 100px;
+    height: 50px;
+    margin-right: 150px;
+    border-radius: 10px;
+    border: white;
+    background-color: white;
+    font-size: 20px;
+    font-weight: 750;
+}
+
+.login > button:hover {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+.login > h1 {
+    margin-left: 150px;
+}
+
+.login > h1 > i {
+    margin-right: 30px;
+}
+
+.bookCards {
+    margin-top: 50px;
+}
+
+.bookCards {
+    display: flex;
+    justify-content: center;
+}
+
+.bookCards > button {
+    width: 200px;
+    height: 70px;
+    font-size: 25px;
+    font-weight: 750;
+    background-color: white;
+    border: white;
+    border-radius: 10px;
+}
+
+.bookCards > button:hover {
+    background-color: #eee;
+    cursor: pointer;
+}
+
+i {
+    width: 5px;
+    height: 5px;
+    margin-right: 25px;
+}
+
+.addBookCards {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    background: #eee;
+    padding: 30px;
+    border-radius: 25px;
+}
+
+.addBookForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.addBookForm > input {
+    width: 250px;
+    height: 50px;
+    border-radius: 10px;
+    font-size: 25px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    border: white;
+}
+
+.addBookForm > input:focus {
+    outline: none;
+}
+
+.addBookForm > .readStatus > input {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    width: 50px;
+    -ms-transform: scale(2); /* IE */
+    -moz-transform: scale(2); /* FF */
+    -webkit-transform: scale(2); /* Safari and Chrome */
+    -o-transform: scale(2); /* Opera */
+    transform: scale(2);
+}
+
+label {
+    font-size: 20px;
+}
+
+.submitButton {
+    width: 250px;
+    height: 50px;
+    border-radius: 15px;
+    background-color: mediumspringgreen;
+    border: mediumspringgreen;
+}
+
+.submitButton:hover {
+    background-color: mediumseagreen;
 }

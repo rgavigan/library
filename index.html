@@ -6,9 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Book Library</title>
 </head>
 <body>
-    <h1>Library</h1>
+    <div class="login">
+        <h1><i class="fa fa-book" aria-hidden="true"></i>Library</h1>
+        <button>Log In</button>
+    </div>
+    <div class="library">
+        <div class="bookCards">
+            <button><i class="fa fa-plus" aria-hidden="true"></i>Add Book</button>
+        </div>
+        <div class="addBookCards">
+            <form class="addBookForm">
+                <input class="input" id="title" type="text" placeholder="Title" required>
+                <input class="input" id="author" type="text" placeholder="Author" required>
+                <input class="input" id="pages" type="number" placeholder="Pages" required>
+                <div class="readStatus">
+                    <label for="readStatus">Have you read this book?</label>
+                    <input class="checkbox" id="isRead" type="checkbox">
+                </div>
+                <button class="submitButton" type="submit">Submit</button>
+            </form>
+        </div>
+        <div class="overlay" id="overlay"></div>
+    </div>
 </body>
 </html>
