@@ -10,15 +10,18 @@
     <title>Book Library</title>
 </head>
 <body>
-    <div class="login">
+    <div class="login" id="login">
         <h1><i class="fa fa-book" aria-hidden="true"></i>Library</h1>
         <button>Log In</button>
     </div>
-    <div class="library">
+    <div class="library" id="library">
         <div class="bookCards">
-            <button><i class="fa fa-plus" aria-hidden="true"></i>Add Book</button>
+            <button onclick="toggleAddBook()" id="addButton"><i class="fa fa-plus" aria-hidden="true"></i>Add Book</button>
         </div>
-        <div class="addBookCards">
+        <div id="libraryBook" class="libraryBook">
+
+        </div>
+        <div class="addBookCards" id="addBookDiv" style="display: none;">
             <form class="addBookForm">
                 <input class="input" id="title" type="text" placeholder="Title" required>
                 <input class="input" id="author" type="text" placeholder="Author" required>
@@ -27,7 +30,7 @@
                     <label for="readStatus">Have you read this book?</label>
                     <input class="checkbox" id="isRead" type="checkbox">
                 </div>
-                <button class="submitButton" type="submit">Submit</button>
+                <button class="submitButton" type="button" onclick="addBookToLibrary()">Submit</button>
             </form>
         </div>
         <div class="overlay" id="overlay"></div>

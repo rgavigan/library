@@ -128,3 +128,33 @@ label {
 .submitButton:hover {
     background-color: mediumseagreen;
 }
+
+.libraryBook {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.bookClass {
+    background-color: #eee;
+    border-radius: 15px;
+    text-align: center;
+    min-height: 300px;
+    box-shadow: 0 1px 5px black;
+}
+
+.bookClass > p {
+    font-size: 18px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 30px;
+}
+
+.bookClass > h4 {
+    font-size: 25px;
+}
+
+.blur {
+    filter: blur(3px);
+}
