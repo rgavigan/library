@@ -137,18 +137,19 @@ label {
     margin-right: 25px;
 }
 
-.bookClass {
+.bookClasses {
     background-color: #eee;
     border-radius: 15px;
     text-align: center;
     min-height: 300px;
     box-shadow: 0 1px 5px black;
+    display: flex;
+    flex-direction: column;
 }
 
 .bookClass > p {
     font-size: 18px;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin-top: 30px;
 }
 
 .bookClass > h4 {
@@ -157,4 +158,18 @@ label {
 
 .blur {
     filter: blur(3px);
+}
+
+.bookClasses > button {
+    border: none;
+    align-self: end;
+}
+
+.bookClasses > button:hover {
+    color: red;
+    cursor: pointer;
+}
+
+#readBtn {
+    margin-bottom: 25px;
 }

@@ -21,18 +21,25 @@ function addBookToLibrary () {
 
 function displayBooks (myLibrary) {
     const createDiv = document.createElement('div');
-    createDiv.classList.add('bookClass');
+    createDiv.classList.add('bookClasses');
     const libraryBook = document.getElementById('libraryBook')
     for (let i = 0; i <= myLibrary.length; i++) {
         libraryBook.appendChild(createDiv);
-        createDiv.setAttribute("id", `bookClass${i}`);
+        const num = i;
+        createDiv.setAttribute("id", `bookClass${num}`);
         if (isRead.checked == true) {
-            document.getElementById(`bookClass${i}`).innerHTML = `<h4>${title.value}</h4> <p>${author.value}<p> <p>This book is <b>${pages.value}</b> pages</p> <p>This book has been read</p>`;
+            document.getElementById(`bookClass${num}`).innerHTML = `<h4>${myLibrary[i].title}</h4> <p>${myLibrary[i].author}<p> <p>This book is <b>${myLibrary[i].pages}</b> pages</p> <p>Read: ${myLibrary[i].read}</p> <button id="readBtn" onclick="readStatus(${i})">Read</button><button id="delBtn" onclick="return this.parentNode.remove();"><i class="fa fa-times" aria-hidden="true"></i></button>`;
+            const deleteBtn = document.getElementById('delBtn');
+            deleteBtn.setAttribute("id", `delBtn${num}`)
         } else if (isRead.checked == false) {
-            document.getElementById(`bookClass${i}`).innerHTML = `<h4>${title.value}</h4> <p>${author.value}<p> <p>This book is <b>${pages.value}</b> pages</p> <p>This book has <b>not</b> been read</p>`;
+            document.getElementById(`bookClass${num}`).innerHTML = `<h4>${myLibrary[i].title}</h4> <p>${myLibrary[i].author}<p> <p>This book is <b>${myLibrary[i].pages}</b> pages</p> <p>Read: ${myLibrary[i].read}</p> <button id="readBtn" onclick="readStatus(${i})">Read</button><button id="delBtn" onclick="return this.parentNode.remove();""><i class="fa fa-times" aria-hidden="true"></i></button>`;
+            const deleteBtn = document.getElementById('delBtn');
+            deleteBtn.setAttribute("id", `delBtn${num}`)
         }
     }
 }
+
+displayBooks(myLibrary);
 
 function toggleAddBook () {
     const btn = document.getElementById('addButton');
@@ -50,4 +57,13 @@ function toggleAddBook () {
             blurLogin.classList.remove('blur');
         }
     }
+}
+
+function readStatus(i) {
+    if (myLibrary[i].read) {
+        myLibrary[i].read = false;
+    } else {
+        myLibrary[i].read = true;
+    }
+    displayBooks(myLibrary);
 }
